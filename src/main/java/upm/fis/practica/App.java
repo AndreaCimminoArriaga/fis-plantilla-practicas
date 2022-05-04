@@ -13,7 +13,7 @@ public class App {
     	setUp();
     	// get("/sample_route", (req, res) -> {return sampleController.action(req, res);}); 
     	// post("/sample_route", (req, res) -> {return sampleController.action(req, res);}); 
-
+    	get("/test", (req, res) -> {return "hi";});
     	
     }
     
