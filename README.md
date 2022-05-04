@@ -1,4 +1,4 @@
-# fis-plantilla-practicas
+# Plantilla practicas de FIS
 Una plantilla basada en Java spark para el desarrollo de un servicio Web siguiendo el paradigma MVC. La plantilla requiere Java 1.8.
 
 
@@ -10,4 +10,5 @@ Esta plantilla es un esqueleto que provee de las siguientes clases:
 
  * `App` es la clase que arranca el sistema, **no cambiarle el nombre**.
  * `AppUtils` ofrece una serie de métodos estáticos, los más relevantes son: `shouldReturnHtml` que devuelve true si el usuario desde el cliente/navegador pidió una vista basada en HTML, y `shouldReturnJson` que devuelve true si el usuario desde el cliente/navegador pide una vista basada en Json. Para pedir los distintos tipos de vistas se usa la cabecera `Accept` dandole un valor `text/html` para pedir HTML o `application/json` para pedir Json.
- * 
+ * `ViewRender` es una interfaz que será implementada por clases que renderizan el codigo, si durante este proceso ocurriese un error, la excepción `RenderTemplateException` es lanzada. 
+ * `VelocityRender` y `FreemarkerRender` implementan `ViewRender`, la primera para renderizar plantillas HTML utilizando [Velocity](https://velocity.apache.org/) y la segunda [Freemarker](https://freemarker.apache.org/)
