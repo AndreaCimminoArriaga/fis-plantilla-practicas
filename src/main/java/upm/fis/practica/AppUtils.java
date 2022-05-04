@@ -17,4 +17,12 @@ public class AppUtils {
 	    String accept = request.headers(ACCEPT_HEADER);
 	    return accept != null && accept.contains(ACCEPT_HEADER_JSON);
 	}
+	
+	public static String concat(String ... args) {
+		StringBuilder builder = new StringBuilder();
+		for(int index=0; index < args.length;index++) {
+			builder.append(args[index]);
+		}
+		return builder.toString();
+	}
 }
