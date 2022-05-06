@@ -1,0 +1,7 @@
+<h1>Lista de libros:</h1>
+<hr>
+
+#foreach ($libro in $libros)
+<h4> <a href="http://localhost:4567/libro?isbn=$libro.isbn">VER</a> Titlo: $libro.titulo, $libro.isbn, $libro.year   </h4>
+<hr>
+#end
